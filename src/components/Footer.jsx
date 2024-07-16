@@ -2,7 +2,7 @@
 
 export const Footer = () => {
   return (
-    <footer className='flex justify-arround w-full border-[2px] border-black h-[250px]' >
+    <footer className='flex justify-arround w-full  h-[250px]' >
 
         <div className='w-[25%] p-6 pr-10 flex flex-col justify-between gap-8'>
 

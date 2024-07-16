@@ -2,20 +2,22 @@ import { useEffect, useState } from "react"
 import { CardList } from "./CardList"
 import { CardItem } from "./CardItem"
 
+// https://api.escuelajs.co/api/v1/products no muestra imagenes 
+// https://fakestoreapi.com/products/ - api de productos solo tienen 20
 
 export const Card = () => {
   const [data, setData] = useState([])
 
     async function getData() {
-      const rs = await fetch('https://api.escuelajs.co/api/v1/products')
+      const rs = await fetch(' https://fakestoreapi.com/products')
       const rsJson = await rs.json()
 
       const filterProducts = rsJson.map(prod => ({
         id: prod?.id,
         title: prod?.title,
         price: prod?.price,
-        img: prod?.images[0],
-        img2: prod?.category.image,
+        img: prod?.image,
+        
       }))
         setData(filterProducts)
     }
