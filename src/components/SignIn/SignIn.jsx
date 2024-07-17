@@ -2,10 +2,14 @@ import React from 'react'
 import { Input } from './Input'
 import telephone from './iconos/llamada-telefonica.png'
 import email from './iconos/email.png'
+import wall from './public/wallp.jpg'
 
 export const SignIn = () => {
   return (
-    <div className='min-h-screen bg-cover bg-center' style={{backgroundImage: "url('/wallp.jpg')"}}>
+    <div className='font-PrincipalFont'>
+      <div>
+        <img src={wall} alt="fondo de pantalla" className='min-h-screen bg-cover bg-center' />
+      </div>
         <div className='flex flex-col text-center absolute bg-[#2f2f31] left-[35%] top-[4%] rounded-xl h-[300px] w-[500px] place-content-center '>
             <h1 className='text-[35px] underline text-[#f5f5f6]'>Sign in to your account</h1>
             <p className='text-[#cfcfd2]'>Enter your email and password to access your account.</p>
