@@ -8,8 +8,8 @@ import Navbar from '../components/Shop-Page/Nav'
 export default function ShopPage() {
   return (
     <>
-      <Navbar />
-      <div className='flex font-PrincipalFont'>
+      <Navbar className="mb-6"/>
+      <div className='flex font-PrincipalFont mt-6'>
         <Category />
         <Card />
       </div>
