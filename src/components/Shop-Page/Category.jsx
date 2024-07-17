@@ -19,8 +19,8 @@ const Category = () => {
     const colors = ['Black', 'White', 'Blue', 'Red'];
 
     return (
-        <div className="w-64 bg-white p-4 shadow-md">
-            <div className="mb-6">
+        <div className="w-64 bg-white p-4 shadow-md font-PrincipalFont">
+            <div className="mb-8">
                 <h2 className="text-lg font-semibold mb-2">Categories</h2>
                 <ul>
                     {categories.map((category, index) => (
