@@ -24,7 +24,7 @@ export const SignIn = () => {
             <span className='py-[15px] flex text-[#cfcfd2]'> <img src={telephone} alt="icon telephone" className='w-[25px] mx-2'/>+51 987654321</span>
             <span className='py-[15px] flex text-[#cfcfd2]'> <img src={email} alt="icon email" className='w-[25px] mx-2'/>tupropiocorreo@gmail.com</span>
             </div>
-            <button className='bg-[#f5f5f6] text-[#2f2f31] rounded-lg py-1 hover:active:bg-slate-500 hover:bg-slate-400 hover:text-white my-2'>Send Me</button>
+            <button className='bg-[#f5f5f6] text-[#2f2f31] rounded-lg py-1 hover:active:bg-[#5b5b5f] hover:bg-[#444546] hover:text-white my-2'>Send Me</button>
 
         </div>
     </div>
