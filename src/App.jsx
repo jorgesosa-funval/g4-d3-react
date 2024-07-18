@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
+import HeaderBills from './components/headerbills/HeaderBills.jsx';
+import AllBills from './components/AllBills/AllBills.jsx';
 
-export default function App() {
+const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <HeaderBills />
+      <AllBills />
+            
+    </div>
+  );
+};
+
+export default App;
