@@ -8,13 +8,13 @@ export const Modal = ({ isOpen, toggleModal, selectedProduct }) => {
         <h2 className="text-lg mb-4">Editar Producto</h2>
         <form id="Producto" className="flex flex-col">
           <label htmlFor="nombre" className="mb-2">Nombre:</label>
-          <input type="text" id="nombre" name="name" defaultValue={selectedProduct.title} required className="border border-primary-palet-400 px-3 py-2 rounded-lg mb-4" />
+          <input type="text" id="nombre" name="name" defaultValue={selectedProduct.name} required className="border border-primary-palet-400 px-3 py-2 rounded-lg mb-4" />
           
           <label htmlFor="descripcion" className="mb-2">Descripción:</label>
           <input type="text" id="descripcion" name="descripcion" defaultValue={selectedProduct.description} required className="border border-primary-palet-400 px-3 py-2 rounded-lg mb-4 h-[100px] w-60" />
           
           <label htmlFor="quantity" className="mb-2">Cantidad:</label>
-          <input type="text" id="quantity" name="quantity" defaultValue={selectedProduct.rating.count} required className="border border-primary-palet-400 px-3 py-2 rounded-lg mb-4" />
+          <input type="text" id="quantity" name="quantity" defaultValue={selectedProduct.Quantity.count} required className="border border-primary-palet-400 px-3 py-2 rounded-lg mb-4" />
           
           <label htmlFor="price" className="mb-2">Precio:</label>
           <input type="text" id="price" name="price" defaultValue={`$${selectedProduct.price}`} required className="border border-primary-palet-400 px-3 py-2 rounded-lg mb-4" />
