@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Allcomps from './components/statistics/Allcomps';
 
-export default function App() {
+const App = () => {
   return (
-    <div>App</div>
+    
   )
-}
+};
+export default App;
