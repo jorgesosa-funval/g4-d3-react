@@ -5,57 +5,58 @@ import { EditClient } from './EditClient'
 const client = [
     {
         "id": 1,
-        "Nombre": "Jorge",
-        "Apellido": "Sosa",
-        "Telefono": "9555454454",
-        "DNI": "121521",
-        "Correo": "jorge@sosa.com",
-        "Direccion": "St. Zoom"
+        "nombre": "Jorge",
+        "apellido": "Sosa",
+        "telefono": "9555454454",
+        "dni": "121521",
+        "correo": "jorge@sosa.com",
+        "direccion": "St. Zoom"
     },
     {
         "id": 2,
-        "Nombre": "Maria",
-        "Apellido": "Lopez",
-        "Telefono": "9551231234",
-        "DNI": "454521",
-        "Correo": "maria@lopez.com",
-        "Direccion": "Av. Siempre Viva"
+        "nombre": "Maria",
+        "apellido": "Lopez",
+        "telefono": "9551231234",
+        "dni": "454521",
+        "correo": "maria@lopez.com",
+        "direccion": "Av. Siempre Viva"
     },
     {
         "id": 3,
-        "Nombre": "Carlos",
-        "Apellido": "Martinez",
-        "Telefono": "9556786789",
-        "DNI": "987654",
-        "Correo": "carlos@martinez.com",
-        "Direccion": "Calle Falsa 123"
+        "nombre": "Carlos",
+        "apellido": "Martinez",
+        "telefono": "9556786789",
+        "dni": "987654",
+        "correo": "carlos@martinez.com",
+        "direccion": "Calle Falsa 123"
     },
     {
         "id": 4,
-        "Nombre": "Ana",
-        "Apellido": "Garcia",
-        "Telefono": "9551122334",
-        "DNI": "112233",
-        "Correo": "ana@garcia.com",
-        "Direccion": "Boulevard de los Sueños"
+        "nombre": "Ana",
+        "apellido": "Garcia",
+        "telefono": "9551122334",
+        "dni": "112233",
+        "correo": "ana@garcia.com",
+        "direccion": "Boulevard de los Sueños"
     },
     {
         "id": 5,
-        "Nombre": "Luis",
-        "Apellido": "Rodriguez",
-        "Telefono": "9554455667",
-        "DNI": "778899",
-        "Correo": "luis@rodriguez.com",
-        "Direccion": "Calle Luna"
+        "nombre": "Luis",
+        "apellido": "Rodriguez",
+        "telefono": "9554455667",
+        "dni": "778899",
+        "correo": "luis@rodriguez.com",
+        "direccion": "Calle Luna"
     }
-]
+  ]
+  
 
 export const Client = () => {
     const [modal, setModal] = useState(false)
     const [data, setdata] = useState(client)
-        const [editForm, setEditForm] = useState(false)
-    
-   
+    const [editForm, setEditForm] = useState(false)
+
+
     function openForm() {
         setModal(!modal)
     }
@@ -73,9 +74,9 @@ export const Client = () => {
         setdata(newArray)
     }
 
-function editClt() {
-    setEditForm(!editForm)
-}
+    function editClt() {
+        setEditForm(!editForm)
+    }
 
     return (
         <div className=' flex flex-col p-8 w-3/4 h-screen items-end ml-auto bg-slate-200 gap-9'>
@@ -105,12 +106,12 @@ function editClt() {
                     {data.map((c) => (
                         <tr key={c.id} className='text-base'>
                             <td className="border-r-2 py-2 border-slate-500" >{c.id}</td>
-                            <td className="border-r-2 py-2 border-slate-500" >{c.Nombre}</td>
-                            <td className="border-r-2 py-2 border-slate-500" >{c.Apellido}</td>
-                            <td className="border-r-2 py-2 border-slate-500" >{c.Telefono}</td>
-                            <td className="border-r-2 py-2 border-slate-500" >{c.DNI}</td>
-                            <td className=" border-r-2 py-2 border-slate-500" >{c.Correo}</td>
-                            <td className='border-r-2 py-2 border-slate-500'>{c.Direccion}</td>
+                            <td className="border-r-2 py-2 border-slate-500" >{c.nombre}</td>
+                            <td className="border-r-2 py-2 border-slate-500" >{c.apellido}</td>
+                            <td className="border-r-2 py-2 border-slate-500" >{c.telefono}</td>
+                            <td className="border-r-2 py-2 border-slate-500" >{c.dni}</td>
+                            <td className=" border-r-2 py-2 border-slate-500" >{c.correo}</td>
+                            <td className='border-r-2 py-2 border-slate-500'>{c.direccion}</td>
                             <td className="flex px-2 py-2 gap-2 ">
                                 <button className='border-slate-400 border rounded-lg w-28 h-8' onClick={editClt}>EDIT</button>
                                 <button className='border-slate-400 border rounded-lg w-28 h-8' value={c.id} onClick={delet}>DEL</button>
@@ -124,12 +125,13 @@ function editClt() {
             {modal &&
                 <FormClient
                     clickFrom={openForm}
+                    data={data}
                 />
             }
             {
                 editForm &&
                 <EditClient
-                clickEditF={editClt}
+                    clickEditF={editClt}
                 />
             }
 
