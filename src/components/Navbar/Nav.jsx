@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import equis from './icons/equis.png';
 import menu from './icons/menu.png'
+import { ListaNav } from './ListaNav';
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +17,7 @@ export const Nav = () => {
         <button onClick={toggleNav} className='flex content-center w-full border-black border-2px '>
           <img src={equis} alt="icono equis" className='mx-2 my-2 w-7 h-7' /> <p className='relative top-3 uppercase underline text-center left-0 right-0 w-[70%] text-zinc-500'>Menú:</p>
         </button>
-        <ul className='flex flex-col text-center py-3'>
-          <li className='p-5 cursor-pointer hover:text-white'>Home</li>
-          <li className='p-5 cursor-pointer hover:text-white'>Productos</li>
-          <li className='p-5 cursor-pointer hover:text-white'>Clientes</li>
-          <li className='p-5 cursor-pointer hover:text-white'>Facturas</li>
-          <li className='p-5 cursor-pointer hover:text-white'>Ingresos</li>
-          <li className='p-5 cursor-pointer hover:text-white'>Egresos</li>
-          <li className='p-5 cursor-pointer hover:text-white'>Resumen</li>
-        </ul>
+        <ListaNav/>
       </div>
     </div>
   );
