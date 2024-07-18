@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Add } from "./Add";
 export const Header = ({ agregarProducto, productos }) => {
   const [showAdd, setShowAdd] = useState(false);
@@ -17,7 +17,7 @@ export const Header = ({ agregarProducto, productos }) => {
           <button className="border-2 border-primary-palet-400 px-4 py-2 rounded-2xl ml-2 bg-primary-palet-50 hover:bg-primary-palet-400">Delete Product</button>
         </div>
       </header>
-      {showAdd && <Add agregarProducto={agregarProducto} handleCancel={handleCancel} productos={productos}/>}
+      {showAdd && <Add agregarProducto={agregarProducto} handleCancel={handleCancel} productos={productos} />}
     </>
   );
 };

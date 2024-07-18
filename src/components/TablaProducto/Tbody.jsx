@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "./Modal";
 
-export const Tbody = ({productos}) => {
+export const Tbody = ({productos, eliminarProducto}) => {
   const [modals, setModals] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -9,7 +9,9 @@ export const Tbody = ({productos}) => {
     setSelectedProduct(product);
     setModals(!modals);
   };
-
+  const handleEliminarProducto = (id) => {
+    eliminarProducto(id);
+  };
   return (
     <tbody>
       {productos.map((product) => (
@@ -26,7 +28,7 @@ export const Tbody = ({productos}) => {
             >
               Edit
             </button>
-            <button className="border-2 border-primary-palet-400 px-2 py-1 rounded-2xl ml-2 hover:bg-primary-palet-400">Delete</button>
+            <button className="border-2 border-primary-palet-400 px-2 py-1 rounded-2xl ml-2 hover:bg-primary-palet-400" onClick={() => handleEliminarProducto(product.id)}>Delete</button>
           </td>
         </tr>
       ))}

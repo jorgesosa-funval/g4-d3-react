@@ -167,11 +167,16 @@ export const Product = () => {
   const agregarProducto = (nuevoProducto) => {
     setProductos([...productos, nuevoProducto]);
   };
+  const eliminarProducto = (id) =>{
+    const productosFiltrados = productos.filter((producto) => producto.id!== id);
+    setProductos(productosFiltrados);
+  }
   return (
     <div className="font-PrincipalFont">
       <Header agregarProducto={agregarProducto} productos={productos} />
       <Tabla
         productos={productos}
+        eliminarProducto={eliminarProducto}
       />
     </div>
   );
