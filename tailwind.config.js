@@ -22,8 +22,9 @@ export default {
           '800': '#444546',
           '900': '#3b3b3e',
           '950': '#2f2f31',
+        },
       },
-      }
+      backgroundImage:{'wall': "url('/wallpaper.jpeg')"}
 
     },
   },
