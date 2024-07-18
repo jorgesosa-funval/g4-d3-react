@@ -1,9 +1,16 @@
+
 import React from 'react';
-import Allcomps from './components/statistics/Allcomps';
+
+import AppRoutes from './Router/AppRoutes'
 
 const App = () => {
   return (
+
     
+    <>
+      <AppRoutes/>
+    </>
+
   )
 };
 export default App;
