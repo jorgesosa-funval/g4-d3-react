@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import { Footer } from '../components/Footer'
+import Layout from '../components/Ecommers-Components/Layout'
+import { Footer } from '../components/Ecommers-Components/Footer'
 
 export default function EcommersLayout({ children }) {
   return (
