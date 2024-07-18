@@ -5,8 +5,8 @@ export const EditClient = ({clickEditF}) => {
 
   return (
    
-         <div className='bg-gray-900 absolute opacity-75 w-3/4 h-screen pl-32 z-10  right-0 top-0'>
-            <form action="" className='flex flex-col gap-4 w-full h-screen items-start justify-center'>
+         <div className='bg-primary-palet-950 absolute bg-opacity-75 w-full h-screen pl-32 z-10  right-0 top-0'>
+            <form action="" className='flex flex-col gap-4 w-3/5 h-screen place-content-center mx-auto'>
                 <label className='text-white text-xl font-semibold' htmlFor="nombre">Nombre</label>
                 <input className='w-3/4 min-h-10 rounded-xl px-4 focus:outline-none focus:border focus:border-gray-600' id='nombre' type="text" />
                 <label className='text-white text-xl font-semibold' htmlFor="apellido">Apellido</label>
@@ -20,7 +20,7 @@ export const EditClient = ({clickEditF}) => {
                 <label className='text-white text-xl font-semibold' htmlFor="direccion">Direccion</label>
                 <input className='w-3/4 min-h-10 rounded-xl px-4 focus:outline-none focus:border focus:border-gray-600' id='direccion' type="text" />
 
-                <button className='text-white text-xl font-semibold w-3/4 min-h-10 rounded-xl px-4 border mt-4' type='submit' onClick={clickEditF} >Edit Client</button>
+                <button className='text-white text-xl font-semibold w-3/4 min-h-10 rounded-xl px-4 border mt-4 hover:bg-primary-palet-700' type='submit' onClick={clickEditF} >Edit Client</button>
 
             </form>
         </div>
