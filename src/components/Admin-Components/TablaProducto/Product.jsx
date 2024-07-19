@@ -189,7 +189,7 @@ export const Product = () => {
     setProductos([]);
   }
   return (
-    <div className="font-PrincipalFont">
+    <div className="font-PrincipalFont w-[80%]">
       <Header agregarProducto={agregarProducto} productos={productos} vaciarProductos={vaciarProductos} />
       <Tabla
         productos={productos}

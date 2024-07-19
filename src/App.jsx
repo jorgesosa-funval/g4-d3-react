@@ -11,7 +11,6 @@ const App = () => {
       <AppRoutes/>
     </>
 
-
   )
 };
 export default App;
