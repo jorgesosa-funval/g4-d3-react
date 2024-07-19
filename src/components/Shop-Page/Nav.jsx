@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({ searchTerm, setSearchTerm, searchResults }) => {
   return (
     <nav className="flex items-center justify-between p-4 bg-white shadow-md">
-      <div className="flex items-center">
+      <div className="flex items-center flex-grow">
         <svg className="w-8 h-8 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 22L12 2L21 22H3Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -11,15 +11,25 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          {searchResults.length > 0 && (
+            <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
+              {searchResults.map(({ id, title }) => (
+                <div key={id} className="p-2 hover:bg-gray-100 cursor-pointer">
+                  {title}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div className="flex items-center space-x-6">
-        <a href="#" className="text-gray-700 hover:text-gray-900">Home</a>
-        <a href="#" className="text-gray-700 hover:text-gray-900">Shop</a>
-        <a href="#" className="text-gray-700 hover:text-gray-900">About</a>
-        <a href="#" className="text-gray-700 hover:text-gray-900">Contact</a>
+        {['Home', 'Shop', 'About', 'Contact'].map(link => (
+          <a key={link} href="#" className="text-gray-700 hover:text-gray-900">{link}</a>
+        ))}
         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
