@@ -72,7 +72,7 @@ export const Income = () => {
     };
 
     return (
-        <div className="bg-slate-100 p-4 w-4/5 mx-auto rounded-lg font-PrincipalFont">
+        <div className="bg-slate-100 p-4 w-3/4 ml-auto rounded-lg font-PrincipalFont">
             <h2 className="text-xl mb-4">Lista de Ingresos:</h2>
             <table className="table-auto w-full mb-4 border-collapse">
                 <thead>
