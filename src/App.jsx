@@ -1,7 +1,17 @@
-import React from 'react'
 
-export default function App() {
+import React from 'react';
+
+import AppRoutes from './Router/AppRoutes'
+
+const App = () => {
   return (
-    <div>App</div>
+
+    
+    <>
+      <AppRoutes/>
+    </>
+
+
   )
-}
+};
+export default App;
