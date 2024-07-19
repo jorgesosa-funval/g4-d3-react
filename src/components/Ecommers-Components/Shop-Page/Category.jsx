@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-const Category = () => {
-    const [categories, setCategories] = useState([])
+const Category = ({ onCategoryChange }) => {
+    const [categories, setCategories] = useState([]);
+    const [selectedCategories, setSelectedCategories] = useState([]);
+
     const getCategories = async () => {
         try {
             const response = await fetch('https://fakestoreapi.com/products/categories');
@@ -10,42 +12,47 @@ const Category = () => {
         } catch (error) {
             console.error(error);
         }
-    }
+    };
 
     useEffect(() => {
         getCategories();
-    }, [])
-    
-    const colors = ['Black', 'White', 'Blue', 'Red'];
+    }, []);
+
+    const handleCategoryChange = (event) => {
+        const value = event.target.value;
+        const isChecked = event.target.checked;
+        
+        setSelectedCategories(prevSelected => {
+            if (isChecked) {
+                return [...prevSelected, value];
+            } else {
+                return prevSelected.filter(category => category !== value);
+            }
+        });
+    };
+
+    useEffect(() => {
+        onCategoryChange(selectedCategories);
+    }, [selectedCategories, onCategoryChange]);
 
     return (
         <div className="w-72 bg-white px-10 py-5 shadow-none font-PrincipalFont">
             <div className="mb-8">
-                <h2 className="text-lg font-semibold mb-2">Categories</h2>
+                <h2 className="text-lg px-10 font-semibold mb-3">Categories</h2>
                 <ul>
                     {categories.map((category, index) => (
-                        <li key={index} className="mb-1">
+                        <li key={index} className="mb-2">
+                            <input 
+                                type="checkbox" 
+                                name="category" 
+                                value={category} 
+                                onChange={handleCategoryChange} 
+                                className="mr-1"
+                            />
                             {category}
                         </li>
                     ))}
                 </ul>
-            </div>
-
-            <div>
-                <h2 className="text-lg font-semibold mb-2">Filters</h2>
-                <div className="mb-4">
-                    <h3 className="font-medium mb-1">Price Range</h3>
-                    {/* I still didn't add the filter by price*/}
-                </div>
-                <div>
-                    <h3 className="font-medium mb-1">Color</h3>
-                    {colors.map((color, index) => (
-                        <div key={index} className="flex items-center mb-1">
-                            <input type="checkbox" id={color} className="mr-2" />
-                            <label htmlFor={color}>{color}</label>
-                        </div>
-                    ))}
-                </div>
             </div>
         </div>
     );
