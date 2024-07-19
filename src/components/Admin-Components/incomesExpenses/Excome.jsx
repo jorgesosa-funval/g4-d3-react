@@ -72,8 +72,10 @@ export const Excome = () => {
     };
 
     return (
-        <div className="bg-slate-100 p-4 w-3/4 ml-auto rounded-lg font-PrincipalFont">
-            <h2 className="text-xl mb-4">Lista de Egresos:</h2>
+        <div className="bg-white py-3 w-[80%] ml-auto rounded-lg font-PrincipalFont">
+            <div className="bg-primary-palet-700 w-full">
+            <h2 className="text-3xl mb-4 py-6 px-4 text-white">Lista de Egresos:</h2>
+            </div>
             <table className="table-auto w-full mb-4 border-collapse">
                 <thead>
                     <tr>

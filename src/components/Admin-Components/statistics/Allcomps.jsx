@@ -30,9 +30,9 @@ const options = {
 
 const Allcomps = () => {
   return (
-    <div className="flex flex-col md:flex-row w-[80%] justify-center" >
+    <div className="flex flex-col md:flex-row w-[80%]  font-PrincipalFont" >
       {/* <Sidebar /> */}
-      <div className="w-full md:w-4/5 p-6">
+      <div className="w-full">
         <Header />
         <Resumen />
         <ChartComponent data={data} options={options} />

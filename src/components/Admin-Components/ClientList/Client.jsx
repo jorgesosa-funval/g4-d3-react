@@ -79,17 +79,17 @@ export const Client = () => {
     }
 
     return (
-        <div className=' flex flex-col px-4 py-8 w-3/4 h-screen items-end ml-auto bg-primary-palet-50 gap-9'>
-            <nav className='flex flex-row items-center w-full'>
-                <h2 className='flex font-bold text-2xl text-center w-1/2 justify-center'>LISTA DE CLIENTES</h2>
+        <div className=' font-PrincipalFont flex flex-col w-[80%] h-screen items-end ml-auto bg-primary-palet-50 gap-9'>
+            <nav className='flex flex-row items-center w-full bg-primary-palet-700 '>
+                <h2 className='flex font-bold text-2xl py-8 text-center w-1/2 justify-center text-white'>LISTA DE CLIENTES</h2>
 
                 <div className="flex gap-6 w-1/2 justify-end px-10">
-                    <button onClick={openForm} className='border-slate-400 border rounded-lg w-28 h-8 hover:bg-primary-palet-200'>Add Client</button>
-                    <button className='border-slate-400 border rounded-lg w-28 h-8 hover:bg-primary-palet-200'>Delete All</button>
+                    <button onClick={openForm} className='border-slate-400 border rounded-lg w-28 h-8 bg-primary-palet-300 hover:bg-primary-palet-200'>Add Client</button>
+                    <button className='border-slate-400 border bg-primary-palet-300 rounded-lg w-28 h-8 hover:bg-primary-palet-200'>Delete All</button>
                 </div>
             </nav>
-            <div className=" bg-white w-full px-4 py-2">
-                <table className='text-center '>
+            <div className=" bg-white w-full px-12 py-2">
+                <table className='text-center w-full '>
                     <thead >
                         <tr  >
                             <th className="border-b-2 border-r-2 border-slate-500 px-1 w-10"  >ID</th>

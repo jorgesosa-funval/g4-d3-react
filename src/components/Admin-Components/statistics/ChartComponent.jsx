@@ -33,7 +33,7 @@ const ChartComponent = ({ data, options }) => {
     return destroyChart;
   }, [data, options]);
 
-  return <canvas className='h-[300px]' ref={chartRef} id="myChart" />;
+  return <canvas className='h-[300px] w-full p-8' ref={chartRef} id="myChart" />;
 };
 
 export default ChartComponent;

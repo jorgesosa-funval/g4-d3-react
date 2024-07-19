@@ -18,7 +18,7 @@ const AllBills = () => {
   };
 
   return (
-    <div className="w-full ml-auto p-8 bg-primary-palet-100 min-h-screen font-PrincipalFont">
+    <div className="w-full ml-auto p-8 bg-white min-h-screen font-PrincipalFont">
       <table className="min-w-full bg-primary-palet-50 ">
         <thead>
           <tr>

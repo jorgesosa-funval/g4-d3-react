@@ -19,7 +19,7 @@ const Resumen = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 max-h-[200px] rounded-lg shadow-lg">
+    <div className="bg-white p-10 max-h-[200px] rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold mb-4">Resumen</h2>
       <div className="flex justify-between mb-6">
         <div>

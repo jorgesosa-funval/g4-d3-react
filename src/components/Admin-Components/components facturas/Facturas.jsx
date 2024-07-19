@@ -6,7 +6,7 @@ import InvoiceProvider from './context/InvoiceContext.jsx';
 
 export const Facturas = () => {
   return (
-    <div className="w-[80%] flex">
+    <div className="w-[80%] flex  font-PrincipalFont">
       <InvoiceProvider>
         <div className='w-full'>
           <HeaderBills />
