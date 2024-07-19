@@ -1,6 +1,6 @@
 import React from 'react'
 import { AdminLayout } from '../../Layouts/AdminLayout'
-import { Product } from '../../components/TablaProducto/Product'
+import { Product } from '../../components/Admin-Components/TablaProducto/Product'
 
 export const ProducPage = () => {
     return (

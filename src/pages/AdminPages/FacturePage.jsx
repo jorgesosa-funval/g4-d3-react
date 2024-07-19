@@ -1,7 +1,7 @@
 import React from 'react'
 import { AdminLayout } from '../../Layouts/AdminLayout'
 
-import { Facturas } from '../../components/components facturas/Facturas'
+import {Facturas} from '../../components/Admin-Components/components facturas/Facturas'
 
 export const FacturePage = () => {
     return (

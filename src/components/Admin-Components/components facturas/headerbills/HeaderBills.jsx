@@ -11,7 +11,7 @@ const HeaderBills = () => {
   };
 
   return (
-    <div className="w-[70%] ml-auto font-PrincipalFont">
+    <div className="w-full ml-auto font-PrincipalFont">
       <div className="flex justify-between items-center py-4 px-8 bg-white shadow">
         <h1 className="text-xl font-bold">Invoice Control</h1>
         <div>

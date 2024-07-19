@@ -1,6 +1,6 @@
 import React from 'react'
 import { AdminLayout } from '../../Layouts/AdminLayout'
-import Allcomps from '../../components/statistics/Allcomps'
+import Allcomps from '../../components/Admin-Components/statistics/Allcomps'
 
 export const ResumenPage = () => {
   return (
