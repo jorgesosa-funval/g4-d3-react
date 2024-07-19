@@ -8,6 +8,7 @@ export default function ShopPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [data, setData] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -21,6 +22,10 @@ export default function ShopPage() {
     const rs = await fetch('https://fakestoreapi.com/products');
     const rsJson = await rs.json();
     setData(rsJson);
+
+    // Extraer títulos para sugerencias
+    const titles = rsJson.map(product => product.title);
+    setSuggestions([...new Set(titles)]); // Eliminamos duplicados
   }
 
   useEffect(() => {
@@ -36,11 +41,19 @@ export default function ShopPage() {
 
   return (
     <EcommersLayout>
-      <div className='flex font-PrincipalFont mt-6'>
-        <Category onCategoryChange={handleCategoryChange} />
-        <div>
-          <Navbar onSearch={handleSearch} className="mb-6" />
-          <Card data={filteredData} />
+      <div className="font-PrincipalFont mt-6">
+        <div className="flex">
+          <div className="">
+            <Category onCategoryChange={handleCategoryChange} />
+          </div>
+          <div className="w-3/4">
+            <Navbar 
+              suggestions={data.map(product => product.title)} 
+              onSearch={handleSearch} 
+              className="mb-6" 
+            />
+            <Card data={filteredData} />
+          </div>
         </div>
       </div>
     </EcommersLayout>
