@@ -167,16 +167,34 @@ export const Product = () => {
   const agregarProducto = (nuevoProducto) => {
     setProductos([...productos, nuevoProducto]);
   };
-  const eliminarProducto = (id) =>{
-    const productosFiltrados = productos.filter((producto) => producto.id!== id);
-    setProductos(productosFiltrados);
+  const eliminarProducto = (id) => {
+    const productosFiltrados = productos.findIndex((producto) => producto.id === id);
+    if (productosFiltrados !== -1) {
+      const nuevosProductos = [...productos]
+      nuevosProductos.splice(productosFiltrados, 1);
+      setProductos(nuevosProductos);
+    }
+  }
+  const editarProducto = (id, nuevoDatosProducto) => {
+    const indiceProducto = productos.findIndex((producto) => producto.id === id);
+    if (indiceProducto !== -1) {
+      const nuevosProductos = [...productos];
+      nuevosProductos[indiceProducto] = { ...nuevosProductos[indiceProducto], ...nuevoDatosProducto };
+      setProductos(nuevosProductos);
+    } else {
+      console.error(`No se encontró ningún producto con el id ${id}`);
+    }
+  };
+  const vaciarProductos = () => {
+    setProductos([]);
   }
   return (
     <div className="font-PrincipalFont">
-      <Header agregarProducto={agregarProducto} productos={productos} />
+      <Header agregarProducto={agregarProducto} productos={productos} vaciarProductos={vaciarProductos} />
       <Tabla
         productos={productos}
         eliminarProducto={eliminarProducto}
+        editarProducto={editarProducto}
       />
     </div>
   );

@@ -1,10 +1,10 @@
 import { Thead } from "./Thead";
 import { Tbody } from "./Tbody";
-export const Tabla = ({ productos, agregarProducto, eliminarProducto }) => {
+export const Tabla = ({ productos, eliminarProducto, editarProducto }) => {
   return (
-    <table className="content-center mx-auto mt-4 max-w-[90%]">
+    <table className="content-center mt-6 w-[99%] mx-auto">
       <Thead />
-      <Tbody productos={productos} agregarProducto={agregarProducto} eliminarProducto={eliminarProducto} />
+      <Tbody productos={productos} eliminarProducto={eliminarProducto} editarProducto={editarProducto} />
     </table>
   );
 };
