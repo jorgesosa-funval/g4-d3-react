@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Layout() {
   return (
-    <nav className="flex items-center justify-between p-4 bg-white shadow-md font-PrincipalFont sticky">
+    <nav className="flex items-center justify-between p-4 bg-white shadow-md font-PrincipalFont">
       <div className="flex items-center">
         <svg className="w-8 h-8 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 22L12 2L21 22H3Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

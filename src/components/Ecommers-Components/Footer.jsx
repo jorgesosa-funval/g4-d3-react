@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 export const Footer = () => {
     return (
         <div className="p-4 font-PrincipalFont overflow-hidden" >
-            <footer className='flex justify-arround w-full h-[250px] ' >
+            <footer className='flex justify-around w-full h-[250px] ' >
 
                 <div className='w-[25%] p-6 pr-10 flex flex-col justify-between gap-8 '>
 
@@ -19,17 +21,14 @@ export const Footer = () => {
 
                 </div>
 
-                <div className='w-[25%] p-6 flex flex-col justify-around gap-8'>
-
+                <div className="w-[25%] p-6 flex flex-col justify-around gap-8">
                     <h3 className="font-bold text-xl">Quick Links</h3>
                     <ul className="flex flex-col gap-4 font-medium">
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/shop">Shop</Link></li>
+                        {/* <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li> */}
                     </ul>
-
-
                 </div>
 
                 <div className='w-[20%] p-6 flex flex-col justify-around gap-8'>
@@ -57,7 +56,7 @@ export const Footer = () => {
                 </div>
             </footer>
             <div className="overflow-hidden p-4">
-                <div className="flex justify-between py-4 px-10 border-[2px] font-PrincipalFont p-4 ">
+                <div className="flex justify-between py-4 px-10 font-PrincipalFont ">
                     <h2> © 2024 Acme Inc. All rights reserved.</h2>
                     <h2>Privacy Policy</h2>
                 </div>
