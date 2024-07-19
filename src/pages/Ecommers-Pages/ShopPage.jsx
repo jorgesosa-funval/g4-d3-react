@@ -8,10 +8,12 @@ export default function ShopPage() {
   return (
     <>
       <EcommersLayout>
-        <Navbar className="mb-6" />
         <div className='flex font-PrincipalFont mt-6'>
           <Category />
-          <Card />
+          <div>
+            <Navbar className="mb-6" />
+            <Card />
+          </div>
         </div>
       </EcommersLayout>
     </>

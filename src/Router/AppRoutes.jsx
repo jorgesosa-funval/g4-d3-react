@@ -11,7 +11,7 @@ export default function AppRoutes() {
       <Route path='/' element={<HomePage />} />
       <Route path='/shop' element={<ShopPage />} />
       <Route path='/cart' element={<CartPage />} />
-      <Route path='/product' element={<ProductPage />} />
+      <Route path='product/:id' element={<ProductPage />} />
     </Routes>
 
   )
