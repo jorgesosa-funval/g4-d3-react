@@ -1,6 +1,10 @@
 import React from 'react';
 
 const Navbar = ({ searchTerm, setSearchTerm, searchResults }) => {
+  const handleSuggestionClick = (title) => {
+    setSearchTerm(title);
+  };
+
   return (
     <nav className="flex items-center justify-between p-4 bg-white shadow-md">
       <div className="flex items-center flex-grow">
@@ -9,7 +13,7 @@ const Navbar = ({ searchTerm, setSearchTerm, searchResults }) => {
         </svg>
         <div className="relative flex-grow max-w-xl">
           <input
-            type="text"
+            type="search"
             placeholder="Search products..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -18,7 +22,11 @@ const Navbar = ({ searchTerm, setSearchTerm, searchResults }) => {
           {searchResults.length > 0 && (
             <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
               {searchResults.map(({ id, title }) => (
-                <div key={id} className="p-2 hover:bg-gray-100 cursor-pointer">
+                <div
+                  key={id}
+                  className="p-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleSuggestionClick(title)}
+                >
                   {title}
                 </div>
               ))}
