@@ -1,11 +1,12 @@
 import React from 'react'
 import { AdminLayout } from '../../Layouts/AdminLayout'
+import { Excome } from '../../components/Admin-Components/incomesExpenses/Excome'
 
 export const ExcomePage = () => {
   return (
     <div className='w-full flex'>
         <AdminLayout>
-            <h1>Egresos</h1>
+            <Excome/>
         </AdminLayout>
     </div>
   )
