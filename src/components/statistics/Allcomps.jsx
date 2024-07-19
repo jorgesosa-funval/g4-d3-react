@@ -30,7 +30,7 @@ const options = {
 
 const Allcomps = () => {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row w-[80%] justify-center" >
       {/* <Sidebar /> */}
       <div className="w-full md:w-4/5 p-6">
         <Header />
