@@ -1,17 +1,7 @@
-import React from 'react';
-import HeaderBills from './components/headerbills/HeaderBills.jsx';
-import AllBills from './components/AllBills/AllBills.jsx';
-import InvoiceProvider from './components/context/InvoiceContext.jsx';
+import React from 'react'
 
-const App = () => {
+export default function App() {
   return (
-    <InvoiceProvider>
-      <div>
-        <HeaderBills />
-        <AllBills />
-      </div>
-    </InvoiceProvider>
-  );
-};
-
-export default App;
+    <div>App</div>
+  )
+}
