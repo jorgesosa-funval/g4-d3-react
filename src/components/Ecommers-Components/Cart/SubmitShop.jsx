@@ -6,7 +6,6 @@ export const SubmitShop = () => {
             <div className='w-[300px] h-[750px] flex flex-col place-content-around border-4 border-primary-palet-950 rounded-3xl font-PrincipalFont'>
                 <div className='w-full h-3/5 p-4 flex flex-col place-content-around '>
                     <h1 className='text-center uppercase font-bold text-3xl'>Sumary</h1>
-
                     <span>Sub total</span>
                     <h3 className='text-center text-primary-palet-600 text-2xl font-bold'>$/. 100</h3>
                     <span>Taxes</span>

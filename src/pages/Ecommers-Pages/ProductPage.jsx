@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <EcommersLayout>
         <Product />
+        <div className='p-8'/>
       </EcommersLayout>
-
     </>
   )
 } 
